@@ -1,0 +1,15 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
+    image: golang
+    commands:
+      - echo 'start build lp-backend...'
+      - pwd
+      - go mod tidy
+      - go build -o lp-backend cmd/backend/main.go
+      - ls | grep lp-backend
+      - echo 'build lp-backend end'

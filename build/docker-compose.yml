@@ -1,0 +1,16 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+  liupai-db:
+    image: postgres
+    container_name: liupai-db
+    restart: always
+    ports:
+      - 5501:5432
+    environment:
+      POSTGRES_PASSWORD: liupai666
+      POSTGRES_DB: liupai
+      POSTGRES_USER: backend
+    volumes:
+      - /root/dbdata/liupai:/var/lib/postgresql/data
