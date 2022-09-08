@@ -13,10 +13,10 @@ import (
 const (
 	//host = "192.168.2.239"
 	host     = "127.0.0.1"
-	port     = 5501
+	port     = 5555
 	user     = "backend"
-	password = "liupai666"
-	dbname   = "liupai"
+	password = "kens666"
+	dbname   = "kens"
 )
 
 // Database represents an account database
@@ -67,94 +67,94 @@ func NewDatabase() (*Database, error) {
 		fmt.Print("user execSchema:", err)
 		return nil, err
 	}
-	if err = d.role.execSchema(db); err != nil {
-		fmt.Print("role execSchema:", err)
-		return nil, err
-	}
-	if err = d.client.execSchema(db); err != nil {
-		fmt.Print("client execSchema:", err)
-		return nil, err
-	}
-	if err = d.customer.execSchema(db); err != nil {
-		fmt.Print("customer execSchema:", err)
-		return nil, err
-	}
-
-	if err = d.region.execSchema(db); err != nil {
-		fmt.Print("region execSchema:", err)
-		return nil, err
-	}
-	if err = d.shippingAddress.execSchema(db); err != nil {
-		fmt.Print("shippingAddress execSchema:", err)
-		return nil, err
-	}
-	if err = d.goods.execSchema(db); err != nil {
-		fmt.Print("goods execSchema:", err)
-		return nil, err
-	}
-	if err = d.goodsCategory.execSchema(db); err != nil {
-		fmt.Print("goodsCategory execSchema:", err)
-		return nil, err
-	}
-	if err = d.goodsProperty.execSchema(db); err != nil {
-		fmt.Print("goodsProperty execSchema:", err)
-		return nil, err
-	}
-	if err = d.order.execSchema(db); err != nil {
-		fmt.Print("order execSchema:", err)
-		return nil, err
-	}
-	if err = d.orderPayment.execSchema(db); err != nil {
-		fmt.Print("orderPayment execSchema:", err)
-		return nil, err
-	}
+	//if err = d.role.execSchema(db); err != nil {
+	//	fmt.Print("role execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.client.execSchema(db); err != nil {
+	//	fmt.Print("client execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.customer.execSchema(db); err != nil {
+	//	fmt.Print("customer execSchema:", err)
+	//	return nil, err
+	//}
+	//
+	//if err = d.region.execSchema(db); err != nil {
+	//	fmt.Print("region execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.shippingAddress.execSchema(db); err != nil {
+	//	fmt.Print("shippingAddress execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.goods.execSchema(db); err != nil {
+	//	fmt.Print("goods execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.goodsCategory.execSchema(db); err != nil {
+	//	fmt.Print("goodsCategory execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.goodsProperty.execSchema(db); err != nil {
+	//	fmt.Print("goodsProperty execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.order.execSchema(db); err != nil {
+	//	fmt.Print("order execSchema:", err)
+	//	return nil, err
+	//}
+	//if err = d.orderPayment.execSchema(db); err != nil {
+	//	fmt.Print("orderPayment execSchema:", err)
+	//	return nil, err
+	//}
 
 	//=============== prepare  =========================
 	if err = d.user.prepare(db); err != nil {
 		fmt.Print("user prepare:", err)
 		return nil, err
 	}
-	if err = d.role.prepare(db); err != nil {
-		fmt.Print("role prepare:", err)
-		return nil, err
-	}
-	if err = d.client.prepare(db); err != nil {
-		fmt.Print("client prepare:", err)
-		return nil, err
-	}
-	if err = d.customer.prepare(db); err != nil {
-		fmt.Print("customer prepare:", err)
-		return nil, err
-	}
-
-	if err = d.region.prepare(db); err != nil {
-		fmt.Print("region prepare:", err)
-		return nil, err
-	}
-	if err = d.shippingAddress.prepare(db); err != nil {
-		fmt.Print("shippingAddress prepare:", err)
-		return nil, err
-	}
-	if err = d.goods.prepare(db); err != nil {
-		fmt.Print("goods prepare:", err)
-		return nil, err
-	}
-	if err = d.goodsCategory.prepare(db); err != nil {
-		fmt.Print("goodsCategory prepare:", err)
-		return nil, err
-	}
-	if err = d.goodsProperty.prepare(db); err != nil {
-		fmt.Print("goodsProperty prepare:", err)
-		return nil, err
-	}
-	if err = d.order.prepare(db); err != nil {
-		fmt.Print("order prepare:", err)
-		return nil, err
-	}
-	if err = d.orderPayment.prepare(db); err != nil {
-		fmt.Print("orderPayment prepare:", err)
-		return nil, err
-	}
+	//if err = d.role.prepare(db); err != nil {
+	//	fmt.Print("role prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.client.prepare(db); err != nil {
+	//	fmt.Print("client prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.customer.prepare(db); err != nil {
+	//	fmt.Print("customer prepare:", err)
+	//	return nil, err
+	//}
+	//
+	//if err = d.region.prepare(db); err != nil {
+	//	fmt.Print("region prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.shippingAddress.prepare(db); err != nil {
+	//	fmt.Print("shippingAddress prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.goods.prepare(db); err != nil {
+	//	fmt.Print("goods prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.goodsCategory.prepare(db); err != nil {
+	//	fmt.Print("goodsCategory prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.goodsProperty.prepare(db); err != nil {
+	//	fmt.Print("goodsProperty prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.order.prepare(db); err != nil {
+	//	fmt.Print("order prepare:", err)
+	//	return nil, err
+	//}
+	//if err = d.orderPayment.prepare(db); err != nil {
+	//	fmt.Print("orderPayment prepare:", err)
+	//	return nil, err
+	//}
 	return d, nil
 }
 

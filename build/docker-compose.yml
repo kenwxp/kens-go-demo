@@ -2,15 +2,15 @@
 version: '3.1'
 
 services:
-  liupai-db:
+  kens-db:
     image: postgres
-    container_name: liupai-db
+    container_name: kens-db
     restart: always
     ports:
-      - 5501:5432
+      - 5555:5432
     environment:
-      POSTGRES_PASSWORD: liupai666
-      POSTGRES_DB: liupai
+      POSTGRES_PASSWORD: kens666
+      POSTGRES_DB: kens
       POSTGRES_USER: backend
     volumes:
-      - /root/dbdata/liupai:/var/lib/postgresql/data
+      - /root/dbdata/kens:/var/lib/postgresql/data

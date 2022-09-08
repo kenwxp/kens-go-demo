@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gorilla/mux"
+	"kens/demo/httputil"
 	"kens/demo/routing"
-	"kens/demo/schedule"
 	"kens/demo/storage"
 	"kens/demo/util"
 	"kens/demo/util/enty_logger"
@@ -25,8 +25,11 @@ func main() {
 		panic("db failed init")
 	}
 	// run schedule
-	schedule.Run(db)
-	routing.Setup(routers, db)
+	//schedule.Run(nil)
+
+	// 通知器初始化
+	wsServeCli := httputil.NewWebsocketCli()
+	routing.Setup(routers, db, wsServeCli)
 	err = http.ListenAndServe("0.0.0.0:9201", routers)
 	if err != nil {
 		panic("error" + err.Error())

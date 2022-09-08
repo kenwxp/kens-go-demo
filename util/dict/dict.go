@@ -22,6 +22,7 @@ const (
 	AppChannel     = Channel("0")
 	MiniAppChannel = Channel("1")
 	WindowsChannel = Channel("2")
+	DemoChannel    = Channel("3")
 
 	SubIPCDevice   = DeviceKind("1") //附属摄像头(ipc)
 	NVRDevice      = DeviceKind("2") //录像机 nvr
